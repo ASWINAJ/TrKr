@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.android.home.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:background="#673ab7"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <ImageView
+               android:clickable="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:src="@drawable/back"
+               android:id="@+id/back"/>
+
+           <ImageView
+               android:id="@+id/likebutton"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/fav"
+               android:layout_alignParentRight="true"
+               android:paddingLeft="10dp"
+               android:paddingRight="10dp"/>
+
+
+            <HorizontalScrollView
+                android:foregroundGravity="center_horizontal"
+                android:layout_toLeftOf="@id/likebutton"
+                android:layout_toRightOf="@id/back"
+                android:paddingLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="0dp"
+                android:layout_centerHorizontal="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_height="wrap_content"
+                        android:text="  Bangalore North "
+                        android:background="@drawable/button"
+                        android:backgroundTint="#4a148c"
+                        android:padding="5dp"
+                        android:layout_marginRight="2dp"/>
+
+                    <TextView
+                        android:padding="5dp"
+                        android:id="@+id/first"
+                        android:layout_width="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_height="wrap_content"
+                        android:text="  2 BHK "
+                        android:background="@drawable/button"
+                        android:backgroundTint="#4a148c"/>
+
+
+
+
+                    
+
+
+                </LinearLayout>
+
+
+
+            </HorizontalScrollView>
+
+
+
+       </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+
+</android.support.design.widget.CoordinatorLayout>

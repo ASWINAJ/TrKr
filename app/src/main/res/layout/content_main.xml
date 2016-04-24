@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.android.home.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="8dp"
+        >
+
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REFINE \nYOUR SEARCH"
+            android:textColor="#757575"
+            android:textSize="16sp"
+            android:id="@+id/refine"
+
+            />
+
+
+        
+
+
+        <HorizontalScrollView
+            android:foregroundGravity="center_horizontal"
+            android:layout_toRightOf="@id/refine"
+            android:paddingLeft="10dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="0dp"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+            <Button
+            android:id="@+id/resale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Resale properties   "
+            android:background="@drawable/button"
+            android:layout_marginRight="10dp"
+            android:textColor="#757575"/>
+        <Button
+            android:layout_toRightOf="@id/resale"
+            android:id="@+id/newp"
+            android:textColor="#757575"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  New properties  "
+            android:background="@drawable/button"/>
+
+            </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.05dp"
+        android:background="#bdbdbd"
+        ></View>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_marginRight="1dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="FILTER"
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:textColor="#6a1b9a"
+            android:textStyle="bold"
+            />
+
+
+
+        <Button
+            android:textStyle="bold"
+            android:textColor="#6a1b9a"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="SORT"
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:layout_marginRight="1dp"
+            />
+
+        <Button
+            android:textStyle="bold"
+            android:textColor="#6a1b9a"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="NOTIFY"
+            android:background="#ffffff"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:paddingTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="41 Results"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:background="#e0e0e0"
+        android:paddingBottom="3dp"/>
+
+    <GridView
+        android:horizontalSpacing="1dp"
+        android:verticalSpacing="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list"
+        android:divider="#757575"
+        android:dividerHeight="1dp"
+        android:background="#757575"
+        android:stretchMode="columnWidth"
+        android:columnWidth="100dp"/>
+
+</LinearLayout>
